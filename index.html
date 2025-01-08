@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekisteröitymislomake</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Rekisteröitymislomake</h1>
+    <p>Siirry kentästä toiseen tab-näppäimellä.</p>
+    <form id="registrationForm">
+        <label for="userID">Käyttäjä ID:</label><br>
+        <input type="text" id="userID"><br>
+        <span id="userIDError" class="error"></span><br>
+
+        <label for="password">Salasana:</label><br>
+        <input type="password" id="password"><br>
+        <span id="passwordError" class="error"></span><br>
+
+        <label for="name">Nimi:</label><br>
+        <input type="text" id="name"><br>
+        <span id="nameError" class="error"></span><br>
+
+        <label for="address">Osoite:</label><br>
+        <input type="text" id="address"><br>
+        <span id="addressError" class="error"></span><br>
+
+        <label for="country">Maa:</label><br>
+        <select id="country">
+            <option value="">Valitse maa</option>
+            <option value="Suomi">Suomi</option>
+            <option value="Ruotsi">Ruotsi</option>
+            <option value="Norja">Norja</option>
+        </select><br>
+        <span id="countryError" class="error"></span><br>
+
+        <label for="postalCode">Postinumero:</label><br>
+        <input type="text" id="postalCode"><br>
+        <span id="postalCodeError" class="error"></span><br>
+
+        <label for="email">Sähköposti:</label><br>
+        <input type="text" id="email"><br>
+        <span id="emailError" class="error"></span><br>
+
+        <label>Sukupuoli:</label><br>
+        <input type="radio" name="gender" value="Mies"> Mies
+        <input type="radio" name="gender" value="Nainen"> Nainen<br>
+        <span id="genderError" class="error"></span><br>
+
+        <label>Kieli:</label><br>
+        <input type="checkbox" id="finnish" value="Suomi"> Suomi
+        <input type="checkbox" id="otherLanguage" value="Muu"> Muu kuin suomi<br>
+        <span id="languageError" class="error"></span><br>
+
+        <label for="additionalInfo">Lisätietoja:</label><br>
+        <textarea id="additionalInfo"></textarea><br><br>
+
+        <button type="button" onclick="validateForm()">Lähetä</button>
+    </form>
+    <script src="scripts.js"></script>
+</body>
+</html>
